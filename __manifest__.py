@@ -14,6 +14,7 @@
 
         # views
         'views/siswa_views.xml',
+        'views/guru_views.xml',
     ],
     'demo': [],
     'qweb': [],
