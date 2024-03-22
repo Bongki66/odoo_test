@@ -11,6 +11,9 @@
     'data': [
         # security
         'security/ir.model.access.csv',
+
+        # views
+        'views/siswa_views.xml',
     ],
     'demo': [],
     'qweb': [],

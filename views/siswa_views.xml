@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--TREE-->
+    <record id="siswa_view_tree" model="ir.ui.view">
+        <field name="name">siswa.view.tree</field>
+        <field name="model">siswa</field>
+        <field name="arch" type="xml">
+            <tree string="Siswa">
+                <field name="name"/>
+                <field name="date_of_birth"/>
+                <field name="guru_id"/>
+                <field name="mapel_id"/>
+                <field name="kelas_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--FORM-->
+    <record id="siswa_view_form" model="ir.ui.view">
+        <field name="name">siswa.view.form</field>
+        <field name="model">siswa</field>
+        <field name="arch" type="xml">
+            <form string="Siswa">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="date_of_birth"/>
+                        </group>
+                        <group>
+                            <field name="guru_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="mapel_id"/>
+                            <field name="kelas_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--SEARCH-->
+    <record id="siswa_view_search" model="ir.ui.view">
+        <field name="name">siswa.view.search</field>
+        <field name="model">siswa</field>
+        <field name="arch" type="xml">
+            <search string="Siswa">
+                <field name="name"/>
+                <field name="guru_id"/>
+                <field name="mapel_id"/>
+                <field name="kelas_id"/>
+            </search>
+        </field>
+    </record>
+
+    <!--ACTION-->
+    <record id="action_siswa" model="ir.actions.act_window">
+        <field name="name">Siswa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">siswa</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="siswa_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new siswa data!
+            </p>
+        </field>
+    </record>
+
+    <!--MENU-->
+    <menuitem id="menu_siswa_root"
+              name="Siswa"
+              sequence="1"/>
+
+    <menuitem id="menu_siswa"
+              name="Siswa"
+              action="action_siswa"
+              parent="menu_siswa_root"
+              sequence="1"/>
+</odoo>
