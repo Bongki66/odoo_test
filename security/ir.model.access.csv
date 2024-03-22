@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_siswa,access.siswa,siswa.model_siswa,base.group_user,1,1,1,1
+access_guru,access.guru,siswa.model_guru,base.group_user,1,1,1,1
+access_kelas,access.kelas,siswa.model_kelas,base.group_user,1,1,1,1
+access_mata_pelajaran,access.mata.pelajaran,siswa.model_mata_pelajaran,base.group_user,1,1,1,1

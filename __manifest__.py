@@ -9,7 +9,8 @@
     'images': [],
     'depends': ['base'],
     'data': [
-        # views
+        # security
+        'security/ir.model.access.csv',
     ],
     'demo': [],
     'qweb': [],
