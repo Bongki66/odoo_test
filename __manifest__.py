@@ -17,6 +17,10 @@
         'views/guru_views.xml',
         'views/mapel_views.xml',
         'views/kelas_views.xml',
+
+        # reports
+        'report/siswa_report_templates.xml',
+        'report/siswa_report.xml',
     ],
     'demo': [],
     'qweb': [],

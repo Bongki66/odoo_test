@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_siswa" model="ir.actions.report">
+            <field name="name">List Siswa</field>
+            <field name="model">siswa</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">siswa.report_siswa</field>
+            <field name="report_file">siswa.report_siswa</field>
+            <field name="print_report_name">List Siswa</field>
+            <field name="binding_model_id" ref="model_siswa"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">list</field>
+        </record>
+    </data>
+</odoo>
